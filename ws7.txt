@@ -1,0 +1,10 @@
+Script started on 2022-10-24 19:50:17-04:00
+]0;amirali@sjsu:/mnt/scratch/amirali[amirali@sjsu amirali]$ grep 52157117 amazon_reviews_us_Books_v1_02.tsv | cut -f 14 > workSheet.tsv
+]0;amirali@sjsu:/mnt/scratch/amirali[amirali@sjsu amirali]$ cat workSheet.tsv | tr -d "," | tr -d "." | tr -d ";"  > test.tsv
+]0;amirali@sjsu:/mnt/scratch/amirali[amirali@sjsu amirali]$ sed -e 's/\<and\>//g' test.tsv | sed -e 's/\<or\>//g' | sed -e 's/\<if\>//g' | sed -e 's/\<in\>//g'| sed -e 's/\<it\>//g' > test1.tsv
+]0;amirali@sjsu:/mnt/scratch/amirali[amirali@sjsu amirali]$ sed -e 's/<[^>]*>//g' test1.tsv 
+I read this book over a couple of days  It was hard to put down  The things I liked best about this book were very interesting characters that made you think hard about them a plot filled with suspense to the end multiple subplots that merged well together  a lean writing style that let me focus mostly on the characters  the provocative web I found them   This is a very thougthfully crafted story I think most anyone would enjoy this novel  Highly recommended
+Excellent account of leaping from job security to job risk for the rewards  of founding  growing your own company  This is not a &quothow-to do  &quot book  It is more of a &quotwhat I faced book&quot with helpful  pointers along the way-- the book does shows the steps  general terms of  what an entrepreneur with a vision must do to succeed  Passion is a  driving force  Mr Ashbrook's account showed that he  his co-founder  had   The book is a touching  interesting read with informative  business points interlaced  
+]0;amirali@sjsu:/mnt/scratch/amirali[amirali@sjsu amirali]$ exit
+
+Script done on 2022-10-24 19:51:19-04:00
